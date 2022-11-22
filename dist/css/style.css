@@ -753,6 +753,7 @@ body::after {
 
 .timetable__title {
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .timetable__time {

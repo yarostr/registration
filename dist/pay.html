@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Оплата ВВЕРХ23</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221123005924">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js?_v=20221123005924"></script>
+		<form name="TinkoffPayForm" onsubmit="pay(this); return false;">
+			<input class="tinkoffPayRow" type="hidden" name="terminalkey" value="1669141398063DEMO">
+			<input class="tinkoffPayRow" type="hidden" name="frame" value="false">
+			<input class="tinkoffPayRow" type="hidden" name="language" value="ru">
+			<input class="tinkoffPayRow" type="hidden" placeholder="Сумма заказа" name="amount" value="400">
+			<input class="tinkoffPayRow" type="hidden" placeholder="Номер заказа" name="order">
+			<input class="tinkoffPayRow" type="hidden" placeholder="Описание заказа" name="description" value="Добровольное пожертвование">
+			<input class="tinkoffPayRow" type="hidden" placeholder="ФИО плательщика" name="name">
+			<input class="tinkoffPayRow" type="hidden" placeholder="E-mail" name="email">
+			<input class="tinkoffPayRow" type="hidden" placeholder="Контактный телефон" name="phone">
+			<input class="tinkoffPayRow button" type="submit" value="Оплатить">
+		</form>
+		<style>
+			@font-face {
+				font-family: RobotoFlex2;
+				font-display: swap;
+				src: url("../fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].woff2") format("woff2"), url("../fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].woff") format("woff");
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			.button {
+				align-items: center;
+				display: block;
+				width: 100%;
+				max-width: 530px;
+				text-transform: uppercase;
+				font-family: RobotoFlex2;
+				font-size: 36px;
+				font-variation-settings: "wght" 850, "wdth" 150, "opsz" 140, "GRAD" -150, "slnt" 0, "XTRA" 465, "XOPQ" 100, "YOPQ" 85, "YTLC" 550, "YTUC" 680, "YTAS" 715, "YTDE" -213, "YTFI" 675;
+				padding: 26px 48px;
+				font-size: 20px;
+				margin: 0 auto;
+				color: white;
+				background-color: black;
+			}
+		</style>
+	</div>
+</body>
+
+</html>

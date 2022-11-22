@@ -7039,15 +7039,9 @@
             });
             if (document.querySelector(".timetable__slider")) new core(".timetable__slider", {
                 modules: [ Navigation ],
-                observer: true,
-                observeParents: true,
                 slidesPerView: 2,
                 speed: 800,
-                slidesPerGroup: 1,
-                dots: true,
-                infinite: true,
-                centerMode: true,
-                variableWidth: true,
+                slidesPerGroup: 2,
                 navigation: {
                     prevEl: ".swiper-button-prev",
                     nextEl: ".swiper-button-next"
