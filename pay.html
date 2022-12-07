@@ -5,8 +5,8 @@
 	<title>Оплата ВВЕРХ23</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20221207230345">
-	<link rel="stylesheet" href="https://yookassa.ru/integration/simplepay/css/yookassa_construct_form.css?_v=20221207230345">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221208001031">
+	<link rel="stylesheet" href="https://yookassa.ru/integration/simplepay/css/yookassa_construct_form.css?_v=20221208001031">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -19,16 +19,85 @@
 				<div class="ym-input-icon-rub ym-display-none">
 					<input name="sum" placeholder="0.00" class="ym-input ym-sum-input ym-required-input" type="number" step="any" value="500">
 				</div>
+				<h1 class="tittle">
+					осталось только оплатить
+				</h1>
 				<button data-text="Оплатить" class="ym-btn-pay ym-result-price">
-					<span class="ym-text-crop button">Оплатить</span>
+					<span class="ym-text-crop button">жмяк🙌🏻</span>
 				</button>
+
 			</div>
 			<input name="shopId" type="hidden" value="961028">
 		</form>
-		<script src="https://yookassa.ru/integration/simplepay/js/yookassa_construct_form.js?_v=20221207230345"></script>
+		<script src="https://yookassa.ru/integration/simplepay/js/yookassa_construct_form.js?_v=20221208001031"></script>
 
-
+		<footer>
+			<p>
+				«Местная религиозная организация Церковь христиан веры евангельской (пятидесятников) «Слово Жизни», 413840, Саратовская область, г. Балаково, ул. Заречная д.66 ОГРН 1036400000581, ИНН 6439053722, ФНС»
+			</p>
+		</footer>
 		<style>
+			body {
+				margin: 0;
+			}
+
+			footer {
+				background-color: black;
+				padding: 60px;
+				bottom: 0;
+				position: absolute;
+			}
+
+			footer p {
+				color: #E0E0E0;
+				font-family: WorkSans;
+				font-weight: 400;
+				font-size: 13.3px;
+				line-height: 16px;
+				text-align: center;
+			}
+
+			@font-face {
+				font-family: WorkSans;
+				font-display: swap;
+				src: url("../fonts/WorkSans-Black.woff2") format("woff2"), url("../fonts/WorkSans-Black.woff") format("woff");
+				font-weight: 900;
+				font-style: normal;
+			}
+
+			.ym-payment-btn-block {
+				flex-direction: column;
+				background: #E9E9E9;
+				height: 50% !important;
+				margin: 0 !important;
+				padding: 80px 109px;
+				align-items: center;
+			}
+
+			.yoomoney-payment-form {
+				padding: 0;
+				padding-top: 120px;
+				max-width: 626px !important;
+				height: 508px;
+				margin-bottom: 200px;
+			}
+
+			.yoomoney-payment-form .ym-payment-btn-block .ym-btn-pay {
+				display: block !important;
+			}
+
+			.tittle {
+				font-family: RobotoFlex2;
+				font-weight: 850;
+				font-size: 30.5px;
+				line-height: 36px;
+				text-align: center;
+				text-transform: uppercase;
+				font-variation-settings: "wght" 850, "wdth" 150, "opsz" 140, "GRAD" -150, "slnt" 0, "XTRA" 465, "XOPQ" 100, "YOPQ" 85, "YTLC" 550, "YTUC" 680, "YTAS" 715, "YTDE" -213, "YTFI" 675;
+				margin: 0;
+				margin-bottom: 40px;
+			}
+
 			@font-face {
 				font-family: RobotoFlex2;
 				font-display: swap;
@@ -46,11 +115,17 @@
 				font-family: RobotoFlex2;
 				font-size: 36px;
 				font-variation-settings: "wght" 850, "wdth" 150, "opsz" 140, "GRAD" -150, "slnt" 0, "XTRA" 465, "XOPQ" 100, "YOPQ" 85, "YTLC" 550, "YTUC" 680, "YTAS" 715, "YTDE" -213, "YTFI" 675;
-				padding: 26px 48px;
+				padding: 26px 0;
 				font-size: 20px;
 				margin: 0 auto;
 				color: white;
 				background-color: black;
+				text-align: center !important;
+
+			}
+
+			.yoomoney-payment-form .ym-payment-btn-block .ym-btn-pay {
+				min-width: 410px !important;
 			}
 
 			.ym-text-crop {
@@ -72,7 +147,6 @@
 				border-radius: 0;
 				cursor: pointer;
 				margin-right: 0;
-				max-width: 10;
 				text-align: center;
 				text-transform: uppercase;
 			}
@@ -83,6 +157,46 @@
 
 			.input__control {
 				background-color: black !important;
+			}
+
+			@media screen and (max-width: 420px) {
+				.ym-payment-btn-block {
+					background: white;
+				}
+
+				.tittle {
+					font-weight: 850;
+					font-size: 24px;
+					line-height: 24px;
+				}
+
+				.button {
+					max-width: 280px;
+					font-weight: 850;
+					font-size: 16px;
+					line-height: 19px;
+				}
+
+				.yoomoney-payment-form .ym-payment-btn-block .ym-btn-pay {
+					min-width: 280px !important;
+				}
+
+				.yoomoney-payment-form {
+					height: 100%;
+					margin-bottom: 0;
+					margin-top: 0;
+					padding-top: 0;
+				}
+
+				footer p {
+					font-weight: 400;
+					font-size: 9px;
+					line-height: 11px;
+				}
+
+				footer {
+					padding: 20px;
+				}
 			}
 		</style>
 	</div>
