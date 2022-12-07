@@ -623,16 +623,18 @@ body {
   margin-right: 72px;
 }
 
+.no-webp .registration__container{
+  background-image: url("../img/Group 491.png"); }
+
 .registration__container {
   border-bottom: 1px solid #000;
   margin-bottom: 45px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
-.no-webp .registration__all{
-  background-image: url("../img/Group 491.png"); }
-
 .registration__all {
-  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -640,7 +642,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-size: 100%;
 }
 
 .registration__title {
@@ -1682,8 +1683,13 @@ body {
     line-height: 23px;
   }
 
-  .no-webp .registration__all{
+  .no-webp .registration__container{
     background-image: url("../img/clouds blue 2.png"); }
+
+  .registration__container {
+    background-size: contain;
+    background-position: center;
+  }
 
   .registration__button {
     font-weight: 850;
@@ -1767,7 +1773,7 @@ body {
 
 .webp .past__container{ background-image: url(../img/slidergb.webp); }
 
-.webp .registration__all{ background-image: url("../img/Group 491.png"); }
+.webp .registration__container{ background-image: url("../img/Group 491.png"); }
 
 .webp .bird__1{ background-image: url("../img/bird 1.png"); }
 
@@ -1792,5 +1798,5 @@ body {
 
 @media screen and (max-width: 728px){
 
-  .webp .registration__all{ background-image: url("../img/clouds blue 2.png"); }
+  .webp .registration__container{ background-image: url("../img/clouds blue 2.png"); }
 }
